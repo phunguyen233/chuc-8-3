@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chúc Mừng Ngày 8/3 Nha Em Yêu</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            background-color: #ffb6c1; /* Màu hồng nhạt */
+            overflow: hidden;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            position: relative;
+            transition: background 1.5s ease-in-out;
+        }
+        h1 {
+            font-size: 3.5em;
+            color: white;
+            text-shadow: 4px 4px 10px rgba(0,0,0,0.4);
+            animation: glow 2s infinite alternate;
+            margin-bottom: 60px; /* Thêm khoảng cách dưới chữ */
+        }
+        @keyframes glow {
+            from { text-shadow: 0 0 10px #fff, 0 0 20px #ff4081, 0 0 30px #ff79b0; }
+            to { text-shadow: 0 0 20px #fff, 0 0 30px #ff4081, 0 0 40px #ff79b0; }
+        }
+        #message {
+            font-size: 2em;
+            color: white;
+            margin-top: 40px; /* Thêm khoảng cách giữa lời chúc và các nút */
+            opacity: 0;
+            transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+            max-width: 80%;
+            transform: scale(0.8);
+        }
+        .flower-container {
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+            transition: opacity 1s ease-out; /* Thêm hiệu ứng mờ dần */
+        }
+        .flower-svg {
+            width: 200px;
+            height: auto;
+        }
+        path {
+            stroke: #d63384;
+            fill: none;
+            stroke-width: 4;
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+            animation: draw 5s linear forwards;
+        }
+        circle {
+            stroke: #ff4081;
+            fill: none;
+            stroke-width: 4;
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+            animation: draw 5s linear forwards;
+        }
+        @keyframes draw {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+        .button {
+            margin-top: 60px; /* Khoảng cách giữa nút và dòng chữ */
+            padding: 15px 40px;
+            font-size: 1.5em;
+            color: white;
+            background: linear-gradient(45deg, #ff6f61, #ff9472);
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0px 6px 15px rgba(0,0,0,0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .button:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 10px 25px rgba(0,0,0,0.4);
+        }
+        #next-button {
+            position: absolute;
+            bottom: 7cm;  /* Đặt cách dưới lời chúc khoảng 1cm */
+            left: 50%;    /* Căn giữa */
+            transform: translateX(-50%);  /* Căn giữa chính xác */
+            padding: 10px 20px;
+            font-size: 1.2em;
+            background: rgba(255, 255, 255, 0.8);
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            display: none;
+        }
+        #music-control {
+            position: absolute;
+            bottom: 80px;
+            right: 20px;
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="title">💖 Chúc Mừng Ngày 8/3 Em Yêu 💖</h1>
+    <div class="flower-container" id="flower-container">
+        <svg class="flower-svg" viewBox="-100 -100 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(0,0)">
+                <path d="M 0 -50 Q 25 -80 50 -50 Q 75 -20 50 10 Q 25 40 0 50 Q -25 40 -50 10 Q -75 -20 -50 -50 Q -25 -80 0 -50 Z" transform="rotate(0) translate(0,-30)"/>
+                <path d="M 0 -50 Q 25 -80 50 -50 Q 75 -20 50 10 Q 25 40 0 50 Q -25 40 -50 10 Q -75 -20 -50 -50 Q -25 -80 0 -50 Z" transform="rotate(72) translate(0,-30)"/>
+                <path d="M 0 -50 Q 25 -80 50 -50 Q 75 -20 50 10 Q 25 40 0 50 Q -25 40 -50 10 Q -75 -20 -50 -50 Q -25 -80 0 -50 Z" transform="rotate(144) translate(0,-30)"/>
+                <path d="M 0 -50 Q 25 -80 50 -50 Q 75 -20 50 10 Q 25 40 0 50 Q -25 40 -50 10 Q -75 -20 -50 -50 Q -25 -80 0 -50 Z" transform="rotate(216) translate(0,-30)"/>
+                <path d="M 0 -50 Q 25 -80 50 -50 Q 75 -20 50 10 Q 25 40 0 50 Q -25 40 -50 10 Q -75 -20 -50 -50 Q -25 -80 0 -50 Z" transform="rotate(288) translate(0,-30)"/>
+                <circle cx="0" cy="0" r="10" fill="#d63384" />
+            </g>
+        </svg>
+    </div>
+    <button id="start-button" class="button" onclick="celebrate()">Nhận Lời Chúc 🌸</button>
+    <p id="message"></p>
+    <button id="next-button" onclick="nextBackground()">Next ➡️</button>
+    <button id="music-control" onclick="toggleMusic()">🔊 Tắt Nhạc</button>
+    <audio id="music" loop>
+        <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mp3">
+    </audio>
+
+    <script>
+        let step = 1;
+
+        function celebrate() {
+            document.getElementById("title").style.display = "none"; // Ẩn dòng "Chúc Mừng"
+            document.getElementById("music").play();
+            document.getElementById("start-button").style.display = "none";
+            document.getElementById("music-control").style.display = "block";
+            document.getElementById("next-button").style.display = "block";
+            document.getElementById("message").innerHTML = "💖 Em yêu ơi! Anh chúc em luôn xinh đẹp, hạnh phúc và tràn đầy yêu thương. Anh mãi yêu em! 💖";
+            document.getElementById("message").style.opacity = "1";
+            
+            // Ẩn hoa sau khi nhấn "Nhận Lời Chúc"
+            document.getElementById("flower-container").style.display = "none"; 
+        }
+
+        function nextBackground() {
+            if (step === 1) {
+                document.getElementById("message").innerHTML = "💖 Chúc em một ngày 8/3 thật vui vẻ, luôn được yêu thương và trân trọng! 💖";
+                step++;
+                document.getElementById("next-button").style.display = "none";
+            }
+        }
+
+        function toggleMusic() {
+            const music = document.getElementById("music");
+            const button = document.getElementById("music-control");
+            if (music.paused) {
+                music.play();
+                button.textContent = "🔊 Tắt Nhạc";
+            } else {
+                music.pause();
+                button.textContent = "🔇 Bật Nhạc";
+            }
+        }
+    </script>
+</body>
+</html>
